@@ -1,0 +1,133 @@
+{
+  "job_id": "d3kfathfk6qs73emfrb0",
+  "backend": "ibm_torino",
+  "qubits": [
+    54,
+    61,
+    62
+  ],
+  "shots": 30000,
+  "measurement_date": "2025-10-10T21:00:54.978368+09:00",
+  "note": "GHZ state measurement data for Nature Communications submission",
+  "paper_reference": "NCOMMS-25-82293",
+  "measurement_bases": {
+    "computational": "ZZZ",
+    "xxx_pauli": "XXX",
+    "mermin_bases": [
+      "XYY",
+      "YXY",
+      "YYX"
+    ]
+  },
+  "stabilizer_expectations": {
+    "XXX": 0.9223333333333333,
+    "ZZI": 0.9382666666666667,
+    "IZZ": 0.9386666666666666
+  },
+  "stabilizer_consistency": {
+    "value": 0.9330888888888889,
+    "note": "S̄ = (|⟨XXX⟩| + |⟨ZZI⟩| + |⟨IZZ⟩|) / 3"
+  },
+  "mermin_operator": {
+    "value": 3.667466666666667,
+    "components": {
+      "XXX": 0.9223333333333333,
+      "XYY": -0.9168666666666667,
+      "YXY": -0.9139333333333334,
+      "YYX": -0.9143333333333333
+    },
+    "formula": "M = ⟨XXX⟩ - ⟨XYY⟩ - ⟨YXY⟩ - ⟨YYX⟩",
+    "classical_bound": 2.0,
+    "quantum_bound": 4.0,
+    "violation_sigma": "~730σ"
+  },
+  "state_fidelity": {
+    "lower_bound": 0.9511666666666667,
+    "method": "Direct estimation from computational basis",
+    "ghz_population": 0.9511666666666667
+  },
+  "raw_measurement_counts": {
+    "ZZZ": {
+      "111": 13669,
+      "000": 14866,
+      "110": 290,
+      "010": 209,
+      "011": 367,
+      "101": 172,
+      "001": 249,
+      "100": 178
+    },
+    "XXX": {
+      "101": 6610,
+      "000": 7654,
+      "011": 7243,
+      "110": 7328,
+      "010": 285,
+      "100": 262,
+      "001": 293,
+      "111": 325
+    },
+    "XYY": {
+      "111": 7062,
+      "010": 7493,
+      "001": 6848,
+      "100": 7350,
+      "000": 319,
+      "011": 354,
+      "110": 269,
+      "101": 305
+    },
+    "YXY": {
+      "010": 7199,
+      "100": 7271,
+      "001": 7128,
+      "111": 7111,
+      "101": 308,
+      "000": 326,
+      "011": 362,
+      "110": 295
+    },
+    "YYX": {
+      "001": 7442,
+      "010": 7408,
+      "100": 7056,
+      "111": 6809,
+      "011": 387,
+      "110": 276,
+      "000": 330,
+      "101": 292
+    }
+  },
+  "paper_comparison": {
+    "stabilizer_XXX": {
+      "measured": 0.9223333333333333,
+      "paper": 0.902,
+      "difference": 0.020333333333333314
+    },
+    "stabilizer_ZZI": {
+      "measured": 0.9382666666666667,
+      "paper": 0.914,
+      "difference": 0.02426666666666666
+    },
+    "stabilizer_IZZ": {
+      "measured": 0.9386666666666666,
+      "paper": 0.924,
+      "difference": 0.014666666666666606
+    },
+    "mermin": {
+      "measured": 3.667466666666667,
+      "paper": 3.655,
+      "difference": 0.01246666666666707
+    },
+    "fidelity": {
+      "measured": 0.9511666666666667,
+      "paper": 0.951,
+      "difference": 0.00016666666666675933
+    }
+  },
+  "structural_coherence_regime": {
+    "threshold": 0.9,
+    "measured": 0.9330888888888889,
+    "status": "Within SCR"
+  }
+}
