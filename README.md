@@ -12,7 +12,7 @@ This repository contains all code, data, and analysis scripts for reproducing th
 
 ---
 
-## 📌 Key Results
+## Key Results
 
 - **Classical critical band:** U₄ ∈ [0.55, 0.65]
 - **Quantum Structural Coherence Regime:** S̄ ≥ 0.90
@@ -23,11 +23,8 @@ This repository contains all code, data, and analysis scripts for reproducing th
 
 ---
 
-## 📁 Repository Structure
-# Part 2: Repository Structure以降を追加
-$readmeContent += @'
-# Part 2: Repository Structure以降を追加
-$readmeContent += @'
+## Repository Structure
+
 ```
 quantum-stabilizer-correspondence/
 ├── data/
@@ -36,11 +33,35 @@ quantum-stabilizer-correspondence/
 │   │   ├── ghz_final_corrected.json
 │   │   └── device_calibration.json
 │   └── classical/            # Ising model simulation outputs
+│       ├── ising_L8_results.json
+│       ├── ising_L12_results.json
+│       └── ising_L16_results.json
+├── figures/                  # All paper figures (main + supplementary)
+│   ├── fig1_Ising_dmz.png
+│   ├── Figure1_Ising_DMZ.pdf
+│   ├── fig2_experimental_setup.png
+│   ├── fig3_experimental_protocol.pdf
+│   ├── fig4_perichoresis_visualization.png
+│   ├── fig4_perichoresis_visualization.pdf
+│   ├── fig_dmz_with_ghz_measurement_final.png
+│   ├── fig_theory_validation.png
+│   └── fig_theory_validation.pdf
 ├── scripts/
 │   ├── error_analysis.py
 │   ├── apply_readout_mitigation.py
 │   ├── verify_zzi_izz_derivation.py
-│   └── analyze_ghz_corrected.py
+│   ├── plot_figure1.py       # Figure generation scripts
+│   ├── calculate_expectations.py
+│   ├── correct_ghz_labeling.py
+│   ├── verify_paper_consistency.py
+│   └── [other analysis scripts]
+├── src/
+│   ├── classical/            # Ising model implementation
+│   │   └── ising_model.py
+│   ├── quantum/              # GHZ circuit implementation
+│   │   └── ghz_circuits.py
+│   ├── analysis/             # Data analysis utilities
+│   └── visualization/        # Plotting utilities
 ├── reports/
 │   └── error_analysis_report.txt
 ├── docs/
@@ -48,15 +69,39 @@ quantum-stabilizer-correspondence/
 │   ├── SUPPLEMENTARY_NOTE_4_READOUT_MITIGATION.md
 │   ├── SUPPLEMENTARY_NOTE_DATA_VALIDATION.md
 │   └── REVIEWER_RESPONSE_TEMPLATES.md
-└── src/
-    ├── classical/
-    ├── quantum/
-    └── analysis/
+├── tests/                    # Unit tests
+├── notebooks/                # Jupyter notebooks (coming soon)
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## 🚀 Quick Start
+## Figures
+
+All figures used in the Nature Communications manuscript are available in `figures/`:
+
+### Main Text Figures
+- **Figure 1**: Classical Ising model and Dead Man's Zone (DMZ)
+  - `fig1_Ising_dmz.png` (PNG version)
+  - `Figure1_Ising_DMZ.pdf` (High-resolution PDF)
+- **Figure 2**: Experimental setup
+  - `fig2_experimental_setup.png`
+- **Figure 3**: Experimental protocol
+  - `fig3_experimental_protocol.pdf`
+- **Figure 4**: Perichoresis visualization and structural correspondence
+  - `fig4_perichoresis_visualization.png`
+  - `fig4_perichoresis_visualization.pdf`
+
+### Supplementary Figures
+- **DMZ with GHZ measurement**: `fig_dmz_with_ghz_measurement_final.png`
+- **Theory validation**: `fig_theory_validation.png` / `.pdf`
+
+All figures can be regenerated using scripts in `scripts/plot_*.py`.
+
+---
+
+## Quick Start
 
 ### Installation
 ```bash
@@ -91,7 +136,7 @@ python scripts/verify_zzi_izz_derivation.py
 
 ---
 
-## 📊 Data Validation and Error Analysis
+## Data Validation and Error Analysis
 
 ### Error Analysis Pipeline
 ```bash
@@ -117,7 +162,7 @@ python scripts/error_analysis.py
 
 ---
 
-## 🔄 Reproducing Results
+## Reproducing Results
 
 ### Option 1: Use Pre-recorded Data (Recommended)
 ```bash
@@ -134,7 +179,7 @@ python src/quantum/ghz_circuits.py --backend ibm_torino --shots 30000
 
 ---
 
-## 📂 Data Files and Processing
+## Data Files and Processing
 
 ### Quantum Measurement Data
 
@@ -209,7 +254,7 @@ For questions about data processing:
 
 ---
 
-## 🧪 Testing
+## Testing
 ```bash
 pytest tests/ -v
 python scripts/verify_data_integrity.py
@@ -218,7 +263,7 @@ python scripts/validate_paper_values.py
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 ### For Reviewers
 
@@ -244,7 +289,7 @@ python scripts/validate_paper_values.py
 
 ---
 
-## 📖 Citation
+## Citation
 ```bibtex
 @article{Takagi2025Structural,
   title={Structural Correspondence Between Classical Phase Transitions
@@ -270,21 +315,69 @@ python scripts/validate_paper_values.py
 
 ---
 
-## 📧 Contact
+## Data Availability Statement
 
-**Takayuki Takagi**  
-Email: lemissio@gmail.com  
-GitHub: [@ubunturbo](https://github.com/ubunturbo)
+All data and code supporting the findings of this study are openly available:
+
+### 1. Source Code
+- **Repository**: https://github.com/ubunturbo/quantum-phase-transitions
+- **License**: MIT License
+- **Contents**: Complete source code for classical simulations, quantum circuit implementations, data analysis, and figure generation
+
+### 2. Experimental Data
+All data files are available in the `data/` directory:
+- **Raw quantum measurements**: `data/quantum/ghz_raw_results.json`
+- **Corrected quantum data**: `data/quantum/ghz_final_corrected.json`
+- **Device calibration**: `data/quantum/device_calibration.json`
+- **Classical simulations**: `data/classical/ising_L{8,12,16}_results.json`
+
+### 3. Figures
+All manuscript figures are available in the `figures/` directory:
+- Main text figures (Figure 1-4)
+- Supplementary figures
+- Both PNG and PDF formats provided where applicable
+
+### 4. Permanent Archive (Coming Soon)
+- **Zenodo DOI**: 10.5281/zenodo.xxxxx (will be assigned upon paper acceptance)
+- This will provide a permanent, citable record of all data and code
+- The Zenodo archive will include:
+  - Complete snapshot of this repository
+  - All raw and processed data files
+  - Analysis scripts and documentation
+  - Generated figures
+
+### IBM Quantum Job Information
+- **Job ID**: d3kfathfk6qs73emfrb0 (permanent IBM Quantum record)
+- **Backend**: ibm_torino (127-qubit Eagle r3)
+- **Date**: October 10, 2025, 21:00 JST
+- **Qubits**: [54, 61, 62]
+- **Shots**: 30,000 per measurement basis
+
+### Contact
+For questions about data access, reproduction, or any aspect of this work:
+- **Email**: lemissio@gmail.com
+- **GitHub Issues**: https://github.com/ubunturbo/quantum-phase-transitions/issues
 
 ---
 
-## 📄 License
+## Contact
+
+**Takayuki Takagi**
+- Email: lemissio@gmail.com
+- ORCID: 0009-0003-5188-2314
+- GitHub: [@ubunturbo](https://github.com/ubunturbo)
+
+---
+
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
+This permissive license allows anyone to use, modify, and redistribute this code for any purpose, including commercial applications, with proper attribution.
+
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **IBM Quantum** for providing access to quantum hardware
 - Measurements performed on **ibm_torino** (127-qubit Eagle r3) on October 10, 2025
@@ -293,17 +386,30 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🔗 Related Resources
+## Related Resources
 
 - [IBM Quantum Experience](https://quantum.ibm.com/)
 - [Qiskit Documentation](https://qiskit.org/documentation/)
-- [Manuscript (arXiv)](https://arxiv.org/abs/2410.xxxxx)
-- [Data Repository (Zenodo)](https://doi.org/10.5281/zenodo.xxxxx)
+- [Manuscript (arXiv)](https://arxiv.org/abs/2410.xxxxx) - Will be updated with actual arXiv number
+- [Data Repository (Zenodo)](https://doi.org/10.5281/zenodo.xxxxx) - Will be updated with actual DOI
 
 ---
 
-**Note**: This research prioritizes complete transparency. All raw data, corrected data, calibration information, and processing scripts are publicly available to facilitate independent verification and reproduction.
+## Reproducibility Statement
+
+This research prioritizes complete transparency and reproducibility. We provide:
+
+1. **Complete source code** - All algorithms implemented and documented
+2. **Raw experimental data** - Unprocessed measurements from IBM Quantum
+3. **Processed data** - All corrections and calibrations applied
+4. **Analysis scripts** - Every step of data processing documented
+5. **Error analysis** - Comprehensive uncertainty quantification
+6. **Figure generation** - Scripts to reproduce all manuscript figures
+
+We encourage independent verification and replication of our results. All questions, issues, or requests for clarification are welcome via GitHub issues or email.
 
 ---
 
-**Last Updated**: October 16, 2025
+**Last Updated**: October 17, 2025
+
+**Status**: Ready for Nature Communications submission - All code, data, and figures publicly available
