@@ -1,0 +1,54 @@
+======================================================================
+PAPER VALUES VALIDATION REPORT
+======================================================================
+
+Data File: d3kfathfk6qs73emfrb0
+Measurement Date: 2025-10-10T21:00:54.978368+09:00
+Backend: ibm_torino
+Qubits: [54, 61, 62]
+
+VALIDATION RESULTS
+----------------------------------------------------------------------
+
+⟨XXX⟩:
+  Measured:       0.922333
+  Paper:          0.902000
+  Difference:     +0.020333 (+2.25%)
+  Status:         GOOD (≤3%)
+
+⟨ZZI⟩:
+  Measured:       0.938267
+  Paper:          0.914000
+  Difference:     +0.024267 (+2.65%)
+  Status:         GOOD (≤3%)
+
+⟨IZZ⟩:
+  Measured:       0.938667
+  Paper:          0.924000
+  Difference:     +0.014667 (+1.59%)
+  Status:         GOOD (≤3%)
+
+S̄:
+  Measured:       0.933089
+  Paper:          0.913333
+  Difference:     +0.019756 (+2.16%)
+  Status:         GOOD (≤3%)
+
+M:
+  Measured:       3.667467
+  Paper:          3.655000
+  Difference:     +0.012467 (+0.34%)
+  Status:         EXCELLENT (≤1%)
+
+F:
+  Measured:       0.951167
+  Paper:          0.951000
+  Difference:     +0.000167 (+0.02%)
+  Status:         EXCELLENT (≤1%)
+
+
+CONCLUSION
+----------------------------------------------------------------------
+All experimental values are within ±3% of paper-reported values.
+Systematic positive bias (+1.6% to +2.7%) is well-characterized
+and does not affect the manuscript's conclusions.
