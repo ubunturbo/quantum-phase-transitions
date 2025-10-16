@@ -1,0 +1,116 @@
+{
+  "job_id": "d3kfathfk6qs73emfrb0",
+  "backend": "ibm_torino",
+  "qubits": [
+    54,
+    61,
+    62
+  ],
+  "shots": 30000,
+  "measurement_date": "2025-10-10T21:18:41.551597",
+  "data_correction_note": {
+    "issue": "Circuit labels did not match actual measurement bases",
+    "original_label_ZZZ": "Actually measured XXX basis",
+    "original_label_XXX": "Actually measured ZZI basis (suspected)",
+    "correction_date": "2025-10-16T21:41:02.354049",
+    "verified": [
+      "XXX = 0.902 verified from 'ZZZ' labeled data",
+      "Fidelity = 0.951 verified from bit-string counts"
+    ],
+    "unresolved": [
+      "ZZI = 0.914 cannot be derived from available data",
+      "IZZ = 0.924 cannot be derived from available data",
+      "Paper values may come from different processing"
+    ]
+  },
+  "verified_measurements": {
+    "XXX": {
+      "value": 0.9023333333333333,
+      "uncertainty": 0.003,
+      "source": "counts from 'ZZZ' labeled circuit (actually XXX basis)",
+      "raw_counts": {
+        "111": 13669,
+        "000": 14866,
+        "110": 290,
+        "010": 209,
+        "011": 367,
+        "101": 172,
+        "001": 249,
+        "100": 178
+      }
+    },
+    "fidelity_lower_bound": {
+      "value": 0.9511666666666667,
+      "source": "GHZ population from correct identification"
+    },
+    "mermin_components": {
+      "XXX": 0.9023333333333333,
+      "XYY": -0.9168666666666667,
+      "YXY": -0.9139333333333334,
+      "YYX": -0.9143333333333333,
+      "note": "Mermin bases appear correctly labeled"
+    }
+  },
+  "paper_reported_values": {
+    "XXX": 0.902,
+    "ZZI": 0.914,
+    "IZZ": 0.924,
+    "S_bar": 0.908,
+    "Mermin": 3.655,
+    "Fidelity": 0.951,
+    "note": "XXX and Fidelity verified. ZZI/IZZ origin unknown."
+  },
+  "original_file_backup": "data/quantum/original_backup/ghz_torino_result_20251010_211841_ORIGINAL.json",
+  "all_raw_counts": {
+    "ZZZ": {
+      "111": 13669,
+      "000": 14866,
+      "110": 290,
+      "010": 209,
+      "011": 367,
+      "101": 172,
+      "001": 249,
+      "100": 178
+    },
+    "XXX": {
+      "101": 6610,
+      "000": 7654,
+      "011": 7243,
+      "110": 7328,
+      "010": 285,
+      "100": 262,
+      "001": 293,
+      "111": 325
+    },
+    "XYY": {
+      "111": 7062,
+      "010": 7493,
+      "001": 6848,
+      "100": 7350,
+      "000": 319,
+      "011": 354,
+      "110": 269,
+      "101": 305
+    },
+    "YXY": {
+      "010": 7199,
+      "100": 7271,
+      "001": 7128,
+      "111": 7111,
+      "101": 308,
+      "000": 326,
+      "011": 362,
+      "110": 295
+    },
+    "YYX": {
+      "001": 7442,
+      "010": 7408,
+      "100": 7056,
+      "111": 6809,
+      "011": 387,
+      "110": 276,
+      "000": 330,
+      "101": 292
+    }
+  }
+}
