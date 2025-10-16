@@ -1,0 +1,35 @@
+======================================================================
+GHZ STATE ERROR ANALYSIS REPORT
+======================================================================
+
+SUMMARY OF ERROR SOURCES
+----------------------------------------------------------------------
+
+XXX:
+  Expectation value: 0.9223
+  Poisson error:     ± 0.002231
+  Bootstrap std:     ± 0.002227
+  Total error:       ± 0.029180
+  95% CI:            [0.9179, 0.9267]
+
+ZZI:
+  Expectation value: 0.9383
+  Poisson error:     ± 0.001997
+  Bootstrap std:     ± 0.002011
+  Total error:       ± 0.029504
+  95% CI:            [0.9343, 0.9421]
+
+IZZ:
+  Expectation value: 0.9387
+  Poisson error:     ± 0.001991
+  Bootstrap std:     ± 0.001993
+  Total error:       ± 0.029512
+  95% CI:            [0.9347, 0.9425]
+
+
+RECOMMENDED ERROR BARS FOR PAPER:
+----------------------------------------------------------------------
+
+  <XXX> = 0.922 ± 0.029
+  <ZZI> = 0.938 ± 0.030
+  <IZZ> = 0.939 ± 0.030
