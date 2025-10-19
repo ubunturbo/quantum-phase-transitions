@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Qiskit](https://img.shields.io/badge/Qiskit-1.0+-6929C4.svg)](https://qiskit.org/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17388273.svg)](https://doi.org/10.5281/zenodo.17388273)
 
 > **Computational reproducibility package demonstrating nearly perfect classical-quantum correspondence (r = 0.999999) using the TSTT theoretical framework**
 
@@ -181,7 +182,7 @@ If you use this code or results in your research, please cite:
   year = {2025},
   publisher = {GitHub},
   url = {https://github.com/ubunturbo/quantum-phase-transitions},
-  doi = {10.5281/zenodo.XXXXXXX}
+  doi = {10.5281/zenodo.17388273}
 }
 ```
 
